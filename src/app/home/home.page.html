@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    "
+    (click)="removePixel()"
+  >
+    <div
+      class="sharp"
+      style="
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        margin-top: -3.5rem;
+      "
+      [style.background-image]="'url(' + backgroundImage + ')'"
+    >
+      <canvas #canva width="300" height="300" class="canvas"></canvas>
+    </div>
   </div>
 </ion-content>
