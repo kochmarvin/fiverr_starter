@@ -1,0 +1,7 @@
+{
+  "name": "fiverr_starter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
